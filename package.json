@@ -1,12 +1,13 @@
 {
   "name": "nanite-cms",
   "version": "1.0.0",
-  "description": "A tiny CMS for websites built on svelte.js and ❤️",
+  "description": "A tiny node-based static-site builder and CMS built on svelte.js, express.js and ❤️",
   "main": "/dist/nanite-cms.js",
   "author": "@ortonomy",
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-html": "^0.2.3",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@rollup/plugin-typescript": "^8.2.1",

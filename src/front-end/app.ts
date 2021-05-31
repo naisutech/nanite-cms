@@ -1,3 +1,7 @@
+/**
+ * Front-end app goes here
+ */
+
 import App from "./App.svelte";
 
 const app = new App({
@@ -7,4 +11,4 @@ const app = new App({
   },
 });
 
-export default App;
+export default app;

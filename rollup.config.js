@@ -1,5 +1,6 @@
 import autoPreprocess from "svelte-preprocess";
 import svelte from "rollup-plugin-svelte";
+import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import resolve from "@rollup/plugin-node-resolve";
 import html from "@rollup/plugin-html";
@@ -8,14 +9,15 @@ import serve from "rollup-plugin-serve";
 const production = false;
 
 export default {
-  input: "src/nano-cms.ts",
+  input: "src/front-end/app.ts",
   plugins: [
     svelte({
       preprocess: autoPreprocess(),
-      include: "src/**/*.svelte",
+      include: "src/front-end/**/*.svelte",
     }),
+    commonjs(),
     typescript({ sourceMap: !production }),
-    resolve({ browser: true }),
+    resolve({ browser: true, dedupe: ["svelte"] }),
     html({
       meta: [
         {
@@ -27,7 +29,7 @@ export default {
           content: "width=device-width, initial-scale=1.0",
         },
       ],
-      title: "Nano CMS | Tiny content for tiny sites",
+      title: "Nanite CMS | Tiny content for tiny sites",
     }),
     !production && livereload("dist"),
     !production && serve("dist"),
@@ -35,8 +37,8 @@ export default {
   output: {
     sourcemap: true,
     format: "iife",
-    name: "nanoCms",
-    file: "dist/nano-cms.js",
+    name: "naniteCMS",
+    file: "dist/nanite-cms.js",
   },
   watch: {
     clearScreen: true,
