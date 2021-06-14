@@ -1,50 +1,41 @@
-<script>
-	import successkid from 'images/successkid.jpg';
+<script type="text/typescript">
+  import hjs from "highlight.js";
+  import { onMount } from "svelte";
+  import Control from "../components/form/Control.svelte";
+  import Code from "../components/form/Code.svelte";
+
+  onMount(async () => {
+    hjs.highlightAll();
+  });
 </script>
 
+<div class="container self-center fluid-max-width">
+  <h1>Site management</h1>
+  <section class="section">
+    <h2>Meta data</h2>
+    <Control label="Title" value="Gregory" type="text" name="title" />
+    <Control
+      label="Description"
+      value="Gregory"
+      type="text"
+      name="description"
+    />
+  </section>
+  <section class="section">
+    <h2>Scripts & styles</h2>
+    <h3>Styles</h3>
+    <Control label="Global styles">
+      <Code content={""} />
+    </Control>
+    <h3>Scripts</h3>
+    <Control label="Head script">
+      <Code content={""} />
+    </Control>
+    <Control label="Footer script">
+      <Code content={""} />
+    </Control>
+  </section>
+</div>
+
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
 </style>
-
-<svelte:head>
-	<title>Sapper project template</title>
-</svelte:head>
-
-<h1>Great success!</h1>
-
-<figure>
-	<img alt="Success Kid" src="{successkid}">
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>

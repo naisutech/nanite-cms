@@ -1,22 +1,20 @@
-<script>
-	import Nav from '../components/Nav.svelte';
+<script lang="ts">
+  import Nav from "../components/layout/Nav.svelte";
 
-	export let segment;
+  export let segment: string;
 </script>
 
-<style>
-	main {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-</style>
+<svelte:head>
+  <title>Nanite CMS | Tiny content for tiny sites</title>
+</svelte:head>
 
-<Nav {segment}/>
+{#if segment !== "login"}
+  <Nav {segment} />
+{/if}
 
 <main>
-	<slot></slot>
+  <slot />
 </main>
+
+<style>
+</style>
