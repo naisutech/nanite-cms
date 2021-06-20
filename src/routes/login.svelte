@@ -1,21 +1,22 @@
 <script type="text/typescript">
-  import env from "../config/ClientEnvironment";
-  import { stores } from "@sapper/app";
-  import Button from "../components/controls/Button.svelte";
-  import Control from "../components/form/Control.svelte";
-  import type { SessionData } from "express-session";
+  import env from '../config/ClientEnvironment'
+  import { stores } from '@sapper/app'
+  import Button from '../components/controls/Button.svelte'
+  import Control from '../components/form/Control.svelte'
+  import type { SessionData } from 'express-session'
 
   // form location
-  const basePath = env.CMS_BASE_PATH;
-  const loginFormPath = `${basePath}/login`;
+  const basePath = env.CMS_BASE_PATH
+  const loginFormPath = `${basePath}/login`
 
-  const { session } = stores();
-  let errorMessage = null;
+  const { session } = stores()
+  let errorMessage = null
   session.subscribe((val: SessionData) => {
     // handle flash errors
-    const error = val.flash && val.flash.error ? val.flash.error : null;
-    errorMessage = error && error[0] ? error[0] : null;
-  });
+    const error = val.flash && val.flash.error ? val.flash.error : null
+    errorMessage = error && error[0] ? error[0] : null
+  })
+
 </script>
 
 <div class="nanite-auth-container gradient-1">
@@ -27,11 +28,9 @@
     <section
       class="nanite-auth-form-container glass position relative layer-2 flex column align-center"
     >
-      <div class="form-row">
-        <div class="responsive-image" style="--ratio: 4.1/1">
-          <div>
-            <img alt="Nanite CMS Logo" src="./images/LogoFull.svg" />
-          </div>
+      <div class="responsive-image" style="--ratio: 4.1/1">
+        <div>
+          <img alt="Nanite CMS Logo" src="./images/LogoFull.svg" />
         </div>
       </div>
 
@@ -90,4 +89,5 @@
   .nanite-auth-form-container {
     padding: 36px;
   }
+
 </style>

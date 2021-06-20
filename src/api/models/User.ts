@@ -1,5 +1,6 @@
 import { Schema, Model, model } from "mongoose";
 import bcrypt from "bcrypt";
+import type { NaniteUser } from "../../types/main";
 
 interface UserInstance extends Model<NaniteUser> {}
 
