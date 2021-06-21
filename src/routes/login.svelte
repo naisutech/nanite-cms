@@ -35,7 +35,7 @@
       </div>
 
       <div class="form-row">
-        <p>Please authenticate yourself</p>
+        <p class="text text-center">Please authenticate yourself</p>
       </div>
 
       <div class="form-row">
@@ -47,7 +47,7 @@
             placeholder="opensesame"
             type="password"
           />
-          <Button type="submit" text="Go" />
+          <Button type="submit" text="Go" fullWidth={true} />
         </form>
       </div>
 
@@ -88,6 +88,11 @@
 
   .nanite-auth-form-container {
     padding: 36px;
+  }
+
+  .form-row {
+    width: 100%;
+    flex-basis: 100%;
   }
 
 </style>
