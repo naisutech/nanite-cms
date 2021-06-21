@@ -70,8 +70,9 @@ connection
       }
     })
   })
-  .catch(() => {
-    logger('Failed to connect to databse :(')
+  .catch((e) => {
+    logger('App failed to boot...')
+    logger(e)
   })
 
 // DEVELOPMENT
