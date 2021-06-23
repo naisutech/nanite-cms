@@ -26,6 +26,7 @@ html {
 }
 
 body {
+  box-sizing: inherit;
   height: inherit;
   font-size: inherit;
   display: flex;
