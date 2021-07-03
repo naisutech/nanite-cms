@@ -25,20 +25,6 @@
                     </polygon>
                 </g>
             </g>
-            <g id="center_claw" transform="translate(93.000000, 92.000000)" fill="#F83E5D" fill-rule="nonzero">
-                <circle id="Oval" cx="3.5" cy="3.5" r="3.5"></circle>
-                <polygon id="Path" points="3.55527316 77 6 10 1 10"></polygon>
-            </g>
-            <g id="left_claw" transform="translate(55.000000, 92.000000)" fill="#F83E5D" fill-rule="nonzero">
-                <circle id="Oval" cx="20.5" cy="3.5" r="3.5"></circle>
-                <polygon id="Path"
-                    points="4.63868909 29.0225076 20 9.70807524 16.3114464 7 5.32907052e-15 27.5127358 2.24036304 54">
-                </polygon>
-            </g>
-            <path
-                d="M96.5,11.6188022 L169.143248,53.5594011 L169.143248,137.440599 L96.5,179.381198 L23.8567518,137.440599 L23.8567518,53.5594011 L96.5,11.6188022 Z"
-                id="container" stroke="#F83E5D" stroke-width="8"></path>
-            <rect id="viewbox" stroke-opacity="0" stroke="#FFFFFF" x="0.5" y="0.5" width="191" height="191"></rect>
         </g>
         <path
             d="M96.5,11.6188022 L169.143248,53.5594011 L169.143248,137.440599 L96.5,179.381198 L23.8567518,137.440599 L23.8567518,53.5594011 L96.5,11.6188022 Z"

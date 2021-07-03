@@ -1,20 +1,20 @@
-import session from "express-session";
+import session from 'express-session'
 
 interface PassportSessionData {
-  user: NaniteUser;
+  user: NaniteUser
 }
 
 interface ConnectFlashErrors {
-  error: string[];
+  error: string[]
 }
 
 interface ConnectFlashSessionData {
-  error: ConnectFlashErrors;
+  error: string[]
 }
 
-declare module "express-session" {
+declare module 'express-session' {
   export interface SessionData {
-    passport: PassportSessionData;
-    flash: ConnectFlashSessionData;
+    passport: PassportSessionData
+    flash: ConnectFlashSessionData
   }
 }
