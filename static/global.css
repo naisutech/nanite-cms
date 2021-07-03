@@ -2,6 +2,7 @@
   font-size: 62.5%;
   --fnt-fam-d: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --fnt-fam-mono: monospace;
   --fnt-xl: 3.4rem;
   --fnt-l: 2rem;
   --fnt-d: 1.7rem;
@@ -15,10 +16,61 @@
   --col-nanite-3: #33a1fd;
   --col-nanite-4: #fff275;
   --col-nanite-5: #e8f1f2;
+  --col-disabled: #aaa;
   --lay-desktop: 960px;
   --lay-tablet: 768px;
   --lay-phone: 560px;
   box-sizing: border-box;
+  --col-nanite-1-rgba-10: rgba(246, 19, 57, 0.1);
+  --col-nanite-1-rgba-20: rgba(246, 19, 57, 0.2);
+  --col-nanite-1-rgba-30: rgba(246, 19, 57, 0.3);
+  --col-nanite-1-rgba-40: rgba(246, 19, 57, 0.4);
+  --col-nanite-1-rgba-50: rgba(246, 19, 57, 0.5);
+  --col-nanite-1-rgba-60: rgba(246, 19, 57, 0.6);
+  --col-nanite-1-rgba-70: rgba(246, 19, 57, 0.7);
+  --col-nanite-1-rgba-80: rgba(246, 19, 57, 0.8);
+  --col-nanite-1-rgba-90: rgba(246, 19, 57, 0.9);
+  --col-nanite-1-rgba-100: rgba(246, 19, 57, 1);
+  --col-nanite-2-rgba-10: rgba(70, 87, 117, 0.1);
+  --col-nanite-2-rgba-20: rgba(70, 87, 117, 0.2);
+  --col-nanite-2-rgba-30: rgba(70, 87, 117, 0.3);
+  --col-nanite-2-rgba-40: rgba(70, 87, 117, 0.4);
+  --col-nanite-2-rgba-50: rgba(70, 87, 117, 0.5);
+  --col-nanite-2-rgba-60: rgba(70, 87, 117, 0.6);
+  --col-nanite-2-rgba-70: rgba(70, 87, 117, 0.7);
+  --col-nanite-2-rgba-80: rgba(70, 87, 117, 0.8);
+  --col-nanite-2-rgba-90: rgba(70, 87, 117, 0.9);
+  --col-nanite-2-rgba-100: rgba(70, 87, 117, 1);
+  --col-nanite-3-rgba-10: rgba(51, 161, 253, 0.1);
+  --col-nanite-3-rgba-20: rgba(51, 161, 253, 0.2);
+  --col-nanite-3-rgba-30: rgba(51, 161, 253, 0.3);
+  --col-nanite-3-rgba-40: rgba(51, 161, 253, 0.4);
+  --col-nanite-3-rgba-50: rgba(51, 161, 253, 0.5);
+  --col-nanite-3-rgba-60: rgba(51, 161, 253, 0.6);
+  --col-nanite-3-rgba-70: rgba(51, 161, 253, 0.7);
+  --col-nanite-3-rgba-80: rgba(51, 161, 253, 0.8);
+  --col-nanite-3-rgba-90: rgba(51, 161, 253, 0.9);
+  --col-nanite-3-rgba-100: rgba(51, 161, 253, 1);
+  --col-nanite-4-rgba-10: rgba(255, 242, 117, 0.1);
+  --col-nanite-4-rgba-20: rgba(255, 242, 117, 0.2);
+  --col-nanite-4-rgba-30: rgba(255, 242, 117, 0.3);
+  --col-nanite-4-rgba-40: rgba(255, 242, 117, 0.4);
+  --col-nanite-4-rgba-50: rgba(255, 242, 117, 0.5);
+  --col-nanite-4-rgba-60: rgba(255, 242, 117, 0.6);
+  --col-nanite-4-rgba-70: rgba(255, 242, 117, 0.7);
+  --col-nanite-4-rgba-80: rgba(255, 242, 117, 0.8);
+  --col-nanite-4-rgba-90: rgba(255, 242, 117, 0.9);
+  --col-nanite-4-rgba-100: rgba(255, 242, 117, 1);
+  --col-nanite-5-rgba-10: rgba(232, 241, 242, 0.1);
+  --col-nanite-5-rgba-20: rgba(232, 241, 242, 0.2);
+  --col-nanite-5-rgba-30: rgba(232, 241, 242, 0.3);
+  --col-nanite-5-rgba-40: rgba(232, 241, 242, 0.4);
+  --col-nanite-5-rgba-50: rgba(232, 241, 242, 0.5);
+  --col-nanite-5-rgba-60: rgba(232, 241, 242, 0.6);
+  --col-nanite-5-rgba-70: rgba(232, 241, 242, 0.7);
+  --col-nanite-5-rgba-80: rgba(232, 241, 242, 0.8);
+  --col-nanite-5-rgba-90: rgba(232, 241, 242, 0.9);
+  --col-nanite-5-rgba-100: rgba(232, 241, 242, 1);
 }
 
 html {
@@ -58,21 +110,21 @@ main {
 
 h1 {
   font-size: var(--fnt-xl);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.2;
   margin: 16px 0;
 }
 
 h2 {
   font-size: var(--fnt-l);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   margin: 12px 0;
 }
 
 h3 {
   font-size: var(--fnt-l);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
   margin: 8px 0;
 }
@@ -99,10 +151,10 @@ i {
   margin: 4px;
 }
 
-span {
-  font-size: var(--fnt-s);
-  font-weight: 400;
-  line-height: 1.2;
+pre,
+code,
+code * {
+  font-family: var(--fnt-fam-mono);
 }
 
 img {
@@ -241,8 +293,7 @@ img.contain {
 }
 
 .flex-items.fill {
-  flex-grow: 1;
-  flex-basis: 100%;
+  flex: 1;
 }
 
 .flex-items.no-shrink {
@@ -269,12 +320,19 @@ img.contain {
   position: absolute;
 }
 
+.position.absolute.fill-container {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .position.fixed {
   position: fixed;
 }
 
 .position.layer-beneath {
-  z-index: 0;
+  z-index: -1;
 }
 
 .position.layer-0 {
@@ -322,6 +380,22 @@ section.section {
 }
 
 /*
+* TEXT HELPERS
+*/
+
+.text.text-center {
+  text-align: center;
+}
+
+.text.text-left {
+  text-align: left;
+}
+
+.text.text-right {
+  text-align: right;
+}
+
+/*
 * COLOR & EFFECTS UTILITIES
 */
 
@@ -345,6 +419,14 @@ section.section {
   color: var(--col-nanite-5);
 }
 
+.color-light {
+  color: var(--col-light);
+}
+
+.color-dark {
+  color: var(--col-dark);
+}
+
 .bg-1 {
   background-color: var(--col-nanite-1);
 }
@@ -365,12 +447,33 @@ section.section {
   background-color: var(--col-nanite-5);
 }
 
+.bg-light {
+  background-color: var(--col-light);
+}
+
+.bg-dark {
+  background-color: var(--col-dark);
+}
+
 .gradient-1 {
-  background-image: linear-gradient(
+  background: linear-gradient(
     to bottom right,
     var(--col-nanite-1) 0%,
     var(--col-nanite-2) 100%
   );
+}
+
+.gradient-2 {
+  background: linear-gradient(
+    -45deg,
+    var(--col-nanite-1) 0%,
+    var(--col-nanite-5) 100%
+  );
+  background-size: 400%;
+  background-position: 0 0;
+  background-clip: border-box;
+  background-repeat: repeat;
+  animation: 3s infinite alternate gradient-shimmer ease-in-out;
 }
 
 .glass {
@@ -384,18 +487,12 @@ section.section {
   -webkit-border-radius: 12px;
 }
 
-/*
-* TEXT HELPERS
-*/
+@keyframes gradient-shimmer {
+  0% {
+    background-position: 0 0;
+  }
 
-.text.text-center {
-  text-align: center;
-}
-
-.text.text-left {
-  text-align: left;
-}
-
-.text.text-right {
-  text-align: right;
+  100% {
+    background-position: 100% 100%;
+  }
 }

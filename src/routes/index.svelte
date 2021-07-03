@@ -1,12 +1,7 @@
 <script type="text/typescript">
-  import hjs from "highlight.js";
-  import { onMount } from "svelte";
-  import Control from "../components/form/Control.svelte";
-  import Code from "../components/form/Code.svelte";
-
-  onMount(async () => {
-    hjs.highlightAll();
-  });
+  import { onMount } from 'svelte'
+  import Control from '../components/form/Control.svelte'
+  import Code from '../components/form/Code.svelte'
 </script>
 
 <div class="container self-center fluid-max-width">
@@ -25,14 +20,14 @@
     <h2>Scripts & styles</h2>
     <h3>Styles</h3>
     <Control label="Global styles">
-      <Code content={""} />
+      <Code content={'const x = 1;'} size="small" />
     </Control>
     <h3>Scripts</h3>
     <Control label="Head script">
-      <Code content={""} />
+      <!-- <Code content={""} /> -->
     </Control>
     <Control label="Footer script">
-      <Code content={""} />
+      <!-- <Code content={""} /> -->
     </Control>
   </section>
 </div>

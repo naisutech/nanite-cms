@@ -1,25 +1,23 @@
 <script type="text/typescript">
-  import { createEventDispatcher } from 'svelte'
-  const dispatch = createEventDispatcher() // event handling
   import Button from './Button.svelte'
 
   export let preset: string = 'primary'
   export let outline: boolean = false
   export let size: string = 'default'
-  export let inline: boolean = false
   export let fill: boolean = false
-  export let loading: boolean = null
-
-  function handleClick() {
-    dispatch('click')
-  }
+  export let loading: string = null
+  export let type: string = 'button'
+  export let text: string = 'Touch me'
+  export let disabled: boolean = false
 
   $: buttonProps = {
     size,
     outline,
-    inline,
     fill,
     loading,
+    type,
+    text,
+    disabled,
     ...buttonDefs[preset]
   }
 
@@ -58,4 +56,4 @@
   }
 </script>
 
-<Button on:click={handleClick} {...buttonProps} />
+<Button on:click {...buttonProps} />

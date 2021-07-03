@@ -27,7 +27,7 @@ passport.use(
         return done(null, user)
       })
       .catch((e) => {
-        return done(e)
+        return done(null, false, e.message)
       })
   })
 )
@@ -66,6 +66,7 @@ export const addAuthSupport = (app: express.Application) => {
   )
   app.get(basePath + '/logout', function (req, res) {
     req.logout()
+    req.session.destroy(() => {})
     res.redirect(basePath + '/login')
   })
 
@@ -81,15 +82,19 @@ export const addAuthSupport = (app: express.Application) => {
     // get the user from the session
     const user = req?.session?.passport?.user
 
-    // check if the we're in app
-    // redirect if missing from session
-    if (!req.path.includes(basePath + '/login') && !user) {
+    // check if the we're in app &&
+    // redirect if user missing from session
+    if (
+      !user &&
+      req.path !== basePath + '/login' &&
+      req.path.includes(basePath)
+    ) {
       return res.redirect(basePath + '/login')
     }
 
     // check if we're on login page and have a user
     // redirect to app if we're logged in
-    if (req.path.includes(basePath + '/login') && user) {
+    if (user && req.path === basePath + '/login') {
       return res.redirect(basePath)
     }
 
