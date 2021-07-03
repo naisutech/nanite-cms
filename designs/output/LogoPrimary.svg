@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="192px" height="192px" viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Logo</title>
-    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="NaniteCMS" transform="translate(55.000000, 37.000000)" fill="#F83E5D" fill-rule="nonzero">
-            <g id="Group">
-                <path d="M41.4982239,52.9073578 C53.3757676,52.9073578 63,61.8684839 63,42.7033359 C63,23.538188 53.3733995,8 41.4982239,8 C29.6266007,8 20,23.5370513 20,42.7016309 C20,61.8684838 29.6266005,52.9073578 41.4982239,52.9073578 Z" id="mount"></path>
-                <rect id="pivot" x="28" y="0" width="27" height="5"></rect>
-                <g id="right_claw" transform="translate(59.000000, 55.000000)">
-                    <circle id="Oval" cx="3.5" cy="3.5" r="3.5"></circle>
-                    <polygon id="Path" points="20.3613109 29.0225076 22.7578688 54 25 27.515001 8.68855352 7 5 9.70807524"></polygon>
-                </g>
-                <g id="center_claw" transform="translate(37.000000, 55.000000)">
-                    <circle id="Oval" cx="3.5" cy="3.5" r="3.5"></circle>
-                    <polygon id="Path" points="3.55527316 77 6 10 1 10"></polygon>
-                </g>
-                <g id="left_claw" transform="translate(0.000000, 55.000000)">
-                    <circle id="Oval" cx="20.5" cy="3.5" r="3.5"></circle>
-                    <polygon id="Path" points="4.63868909 29.0225076 20 9.70807524 16.3114464 7 5.32907052e-15 27.5127358 2.24036304 54"></polygon>
-                </g>
+<svg width="192px" height="192px" viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>LogoPrimary</title>
+    <g id="LogoPrimary" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo_">
+            <rect id="top_fixture" fill="#F83E5D" x="83" y="16" width="27" height="18"></rect>
+            <path
+                d="M96.4982239,89.9073578 C108.375768,89.9073578 118,98.8684839 118,79.7033359 C118,60.538188 108.373399,45 96.4982239,45 C84.6266007,45 75,60.5370513 75,79.7016309 C75,98.8684838 84.6266005,89.9073578 96.4982239,89.9073578 Z"
+                id="mount" fill="#F83E5D" fill-rule="nonzero"></path>
+            <rect id="pivot" fill="#F83E5D" fill-rule="nonzero" x="83" y="37" width="27" height="5"></rect>
+            <g id="right_claw" transform="translate(114.000000, 92.000000)" fill="#F83E5D" fill-rule="nonzero">
+                <circle id="Oval" cx="3.5" cy="3.5" r="3.5"></circle>
+                <polygon id="Path" points="20.3613109 29.0225076 22.7578688 54 25 27.515001 8.68855352 7 5 9.70807524">
+                </polygon>
             </g>
+            <g id="center_claw" transform="translate(93.000000, 92.000000)" fill="#F83E5D" fill-rule="nonzero">
+                <circle id="Oval" cx="3.5" cy="3.5" r="3.5"></circle>
+                <polygon id="Path" points="3.55527316 77 6 10 1 10"></polygon>
+            </g>
+            <g id="left_claw" transform="translate(55.000000, 92.000000)" fill="#F83E5D" fill-rule="nonzero">
+                <circle id="Oval" cx="20.5" cy="3.5" r="3.5"></circle>
+                <polygon id="Path"
+                    points="4.63868909 29.0225076 20 9.70807524 16.3114464 7 5.32907052e-15 27.5127358 2.24036304 54">
+                </polygon>
+            </g>
+            <path
+                d="M96.5,11.6188022 L169.143248,53.5594011 L169.143248,137.440599 L96.5,179.381198 L23.8567518,137.440599 L23.8567518,53.5594011 L96.5,11.6188022 Z"
+                id="container" stroke="#F83E5D" stroke-width="8"></path>
+            <rect id="viewbox" stroke-opacity="0" stroke="#FFFFFF" x="0.5" y="0.5" width="191" height="191"></rect>
         </g>
-        <path d="M96.5,11.6188022 L169.143248,53.5594011 L169.143248,137.440599 L96.5,179.381198 L23.8567518,137.440599 L23.8567518,53.5594011 L96.5,11.6188022 Z" id="Polygon" stroke="#F83E5D" stroke-width="8"></path>
-        <rect id="top_fixture" fill="#F83E5D" x="83" y="15" width="27" height="19"></rect>
     </g>
 </svg>
