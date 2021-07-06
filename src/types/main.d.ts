@@ -9,6 +9,7 @@ interface AppEnv {
   DB_PASSWORD?: string
   DB_HOST?: string
   DB_NAME?: string
+  DB_AUTH_SOURCE?: string
   PORT?: string
   NODE_ENV?: string
   DEBUG?: string

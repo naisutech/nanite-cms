@@ -20,7 +20,7 @@
 
 <main
   class="position relative"
-  style="--padding: {segment === 'login' ? '0px' : isMobile ? '8px' : '20px'}"
+  style="--padding: {isMobile ? '8px' : '20px'}"
   bind:clientWidth={containerWidth}
 >
   {#if $preloading}

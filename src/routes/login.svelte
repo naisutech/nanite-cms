@@ -32,67 +32,65 @@
     class="nanite-bg-container position absolute fill-container gradient-1"
     in:fade={{ duration: 300 }}
   />
-  <div class="flex-items fill flex column justify-center align-center">
-    <div class="nanite-auth-form-wrapper position relative flex column">
-      <div class="nanite-logo-watermark position absolute layer-1">
-        <img alt="Nanite CMS Logo" src={LogoPrimary} />
+  <div
+    class="flex-items fill flex column justify-center align-center position relative"
+  >
+    <div class="nanite-logo-watermark position absolute layer-1">
+      <img alt="Nanite CMS Logo" src={LogoPrimary} />
+    </div>
+
+    <section
+      class="nanite-auth-form-container glass position relative layer-2 flex column align-center"
+      in:fly={{ y: 400, duration: 500, delay: 300 }}
+    >
+      <div class="responsive-image" style="--ratio: 4.1/1">
+        <div>
+          <img alt="Nanite CMS Logo" src="./images/LogoFull.svg" />
+        </div>
       </div>
 
-      <section
-        class="nanite-auth-form-container glass position relative layer-2 flex column align-center"
-        in:fly={{ y: 400, duration: 500, delay: 300 }}
-      >
-        <div class="responsive-image" style="--ratio: 4.1/1">
-          <div>
-            <img alt="Nanite CMS Logo" src="./images/LogoFull.svg" />
+      <div class="form-row">
+        <p class="text text-center">Please authenticate yourself</p>
+      </div>
+
+      <div class="form-row">
+        <form method="POST" action={loginFormPath} class="flex column">
+          <Control
+            name="username"
+            label="Username"
+            placeholder="admin"
+            containerStyles="margin: 8px 0"
+            autocomplete="off"
+          />
+          <Control
+            name="password"
+            label="Password"
+            placeholder="opensesame"
+            type="password"
+            containerStyles="margin: 8px 0 12px"
+            autocomplete="off"
+          />
+          <NaniteButton type="submit" text="Log in" fill />
+        </form>
+      </div>
+
+      <div class="form-row">
+        {#if errorMessage}
+          <div class="error-message-wrapper">
+            <span>ERROR: {errorMessage}</span>
           </div>
-        </div>
-
-        <div class="form-row">
-          <p class="text text-center">Please authenticate yourself</p>
-        </div>
-
-        <div class="form-row">
-          <form method="POST" action={loginFormPath} class="flex column">
-            <Control
-              name="username"
-              label="Username"
-              placeholder="admin"
-              containerStyles="margin: 8px 0"
-              autocomplete="off"
-            />
-            <Control
-              name="password"
-              label="Password"
-              placeholder="opensesame"
-              type="password"
-              containerStyles="margin: 8px 0 12px"
-              autocomplete="off"
-            />
-            <NaniteButton type="submit" text="Log in" fill />
-          </form>
-        </div>
-
-        <div class="form-row">
-          {#if errorMessage}
-            <div class="error-message-wrapper">
-              <span>ERROR: {errorMessage}</span>
-            </div>
-          {/if}
-        </div>
-      </section>
-    </div>
+        {/if}
+      </div>
+    </section>
   </div>
 {/if}
 
 <style>
   .nanite-logo-watermark {
-    top: -60vh;
     height: 150vh;
     width: 150vh;
     align-self: center;
-    opacity: 0.9;
-    left: -195%;
+    opacity: 0.6;
   }
 
   .nanite-bg-container {
@@ -103,15 +101,12 @@
     justify-content: center;
   }
 
-  .nanite-auth-form-wrapper {
-    max-width: 480px;
-    padding: 10px;
-  }
-
   /*
   * Main Login Box
   */
   .nanite-auth-form-container {
+    width: 100%;
+    max-width: 450px;
     padding: 36px;
   }
 
